@@ -1,0 +1,71 @@
+@use '../global/' as *;
+
+.currencies {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: $color-blue-purp;
+}
+
+.btc-float {
+  position: absolute;
+  top: -190px;
+  left: -277px;
+  animation: move 2s infinite;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.eth-float {
+  position: absolute;
+  top: -190px;
+  right: -277px;
+  animation: move 2s infinite;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(0) scale(0.14);
+  }
+  50% {
+    transform: translateY(-20px) scale(0.14);
+  }
+}
+
+.coin-slider {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+
+  @media (max-width: 950px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
+
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.slider-coin {
+  @media (max-width: 750px) {
+    margin: 0 auto;
+  }
+}
+
+.red-text {
+  color: red !important;
+}
+
+.green-text {
+  color: $green !important;
+}
