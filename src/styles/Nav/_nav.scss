@@ -1,0 +1,78 @@
+@use '../global/' as *;
+
+
+
+
+
+
+    .link {
+      color: $color-white;
+      font-weight: 700;
+       cursor: pointer;
+
+      &:hover {
+        transition: all 0.3s;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: $color-blue-purp;
+      }
+    }
+
+
+.hamburger-menu {
+  display: none;
+  font-size: 2.7rem;
+
+  @media (max-width: 46.875rem) {
+    display: flex !important;
+  }
+}
+
+.sticky-nav {
+  background-color: $bg-black;
+  box-shadow: 0px 0.625rem 0.3125rem 0px rgba(0, 0, 0, 0.16);
+}
+
+.mobile-nav {
+  left: -100%;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    list-style: none;
+
+    a {
+      color: $bg-black;
+      font-weight: 600;
+
+      &:hover {
+        transition: all 0.3s;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: $color-blue-purp;
+      }
+    }
+  }
+}
+
+.mobile-up {
+  left: 0;
+}
+
+.close-mobile {
+  position: absolute;
+  top: 1.8rem;
+  right: 1.8rem;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.3s;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: $color-blue-purp
+  }
+}
