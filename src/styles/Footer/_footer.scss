@@ -1,16 +1,14 @@
 @use '../global/' as *;
 
 .footer-content {
-    i, p {
-
-      &:hover {
-        transition: all 0.3s;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        background-image: $color-blue-purp;
-      }
+  i,
+  p {
+    &:hover {
+      transition: all 0.3s;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: $color-blue-purp;
     }
-
-
+  }
 }

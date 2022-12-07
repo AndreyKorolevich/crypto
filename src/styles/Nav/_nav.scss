@@ -1,24 +1,18 @@
 @use '../global/' as *;
 
+.link {
+  color: $color-white;
+  font-weight: 700;
+  cursor: pointer;
 
-
-
-
-
-    .link {
-      color: $color-white;
-      font-weight: 700;
-       cursor: pointer;
-
-      &:hover {
-        transition: all 0.3s;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        background-image: $color-blue-purp;
-      }
-    }
-
+  &:hover {
+    transition: all 0.3s;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: $color-blue-purp;
+  }
+}
 
 .hamburger-menu {
   display: none;
@@ -73,6 +67,6 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: $color-blue-purp
+    background-image: $color-blue-purp;
   }
 }

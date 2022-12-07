@@ -1,15 +1,15 @@
 <template>
   <section class="w-full">
-    <div class="flex w-full ">
+    <div class="flex w-full">
       <div class="w-full">
-        <label for="wallet" class="block text-xl font-medium text-white w-full ">Ticker</label>
-        <div class="relative rounded-md shadow-md w-full ">
+        <label for="wallet" class="block text-xl font-medium text-white w-full">Ticker</label>
+        <div class="relative rounded-md shadow-md w-full">
           <input
             id="wallet"
             v-model="ticker"
             type="text"
             name="wallet"
-            class="block p-3 pr-10 w-full text-white focus:outline-none focus:ring-white focus:border-white  bg-opacity-5 rounded-xl bg-white border border-opacity-25 border-gray-500 "
+            class="block p-3 pr-10 w-full text-white focus:outline-none focus:ring-white focus:border-white bg-opacity-5 rounded-xl bg-white border border-opacity-25 border-gray-500"
             placeholder="e.g. BTC"
             @keydown.enter="add"
           />

@@ -1,9 +1,9 @@
 <template>
   <div class="flex flex-col items-center p-4 pb-0 min-h-screen w-full">
-    <navbar/>
+    <navbar />
     <hero />
     <div id="market" class="container mx-auto mb-24">
-      <div class="flex items-top gap-x-24 w-full ">
+      <div class="flex items-top gap-x-24 w-full">
         <add-ticker @add-ticker="add" :often-tickers="oftenTickers" :tickers="tickers" />
         <div class="w-full" v-if="tickers.length">
           <label for="filter" class="block text-xl font-medium text-white"> Filter </label>
@@ -12,7 +12,7 @@
             v-model="filter"
             type="text"
             placeholder="e.g. ETH"
-            class="block p-3 pr-10 w-full text-white focus:outline-none focus:ring-white focus:border-white  bg-opacity-5 rounded-xl bg-white border border-opacity-25 border-gray-500 "
+            class="block p-3 pr-10 w-full text-white focus:outline-none focus:ring-white focus:border-white bg-opacity-5 rounded-xl bg-white border border-opacity-25 border-gray-500"
             @keydown.enter="add"
           />
         </div>
@@ -88,8 +88,8 @@
       </template>
     </div>
     <why-us />
-    <join/>
-    <footer-component/>
+    <join />
+    <footer-component />
   </div>
 </template>
 
@@ -114,7 +114,7 @@ export default {
     WhyUs,
     Join,
     FooterComponent,
-    Navbar
+    Navbar,
   },
 
   data() {
@@ -208,13 +208,12 @@ export default {
       tickers = defaultCurrency
     }
 
-      this.tickers = tickers
-      this.tickers?.forEach((ticker) => {
-        subscribeToTicker(ticker.name, (price) => {
-          this.updateTicker(ticker.name, price)
-        })
+    this.tickers = tickers
+    this.tickers?.forEach((ticker) => {
+      subscribeToTicker(ticker.name, (price) => {
+        this.updateTicker(ticker.name, price)
       })
-
+    })
   },
 
   methods: {
